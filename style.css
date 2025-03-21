@@ -1,0 +1,1163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 40px;
+  background-color: #fff9e9;
+}
+
+body {
+  transition: opacity 0.4s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #4e3b31;
+}
+
+h1 {
+  font-size: 32.44px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28.83px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 25.63px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 22.78px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20.25px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrap {
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 40px auto;
+}
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1120px;
+  width: 100%;
+  min-height: 45px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #fff2cc;
+  z-index: 1000;
+  box-shadow: 0 4px 4px rgba(78, 59, 49, 0.1), 0 8px 8px rgba(78, 59, 49, 0.08),
+    0 12px 12px rgba(78, 59, 49, 0.05);
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.nav-left h6 a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+.nav-left h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  width: 60%;
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li h6 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+nav ul li h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.section-hero {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 2fr;
+  grid-template-rows: 1.5fr 0.85fr 1fr;
+  gap: 40px;
+  grid-template-areas:
+    "home project project project"
+    "home resume resume contacts"
+    "skills skills more more";
+  min-height: 700px;
+}
+
+.hero-box {
+  box-sizing: border-box;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  transition: transform 0.4s ease-in-out, background-color 0.6s ease-in-out;
+}
+
+.hero-box {
+  text-decoration: none;
+  color: inherit; /* zajistí, že texty nezmění barvu jako odkazy */
+  cursor: pointer; /* ukazatel na kliknutí */
+  display: block; /* zajistí správné zobrazení a rozměry jako původní boxy */
+}
+
+.home {
+  grid-area: home;
+  background-color: #fff2cc;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left-start;
+  text-align: left;
+  gap: 10px;
+}
+
+.text-home p {
+  margin: 15px 0;
+}
+
+.text-home p {
+  margin: 15px 0;
+}
+
+.profile-photo {
+  max-width: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: -35px;
+  align-self: flex-end;
+  border: 1px solid rgba(78, 59, 49, 0.3);
+}
+
+.project {
+  grid-area: project;
+  background-color: #fbffb1;
+}
+
+.project-content {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.text-projects {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Mezera mezi h3 a p */
+}
+
+.projects-photo {
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #f9ff92;
+}
+
+.resume {
+  grid-area: resume;
+  background-color: #fff2cc;
+  padding: 20px;
+  position: relative;
+  display: flex;
+}
+
+.resume-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1; /* Zabrání roztahování boxu */
+  min-height: 0; /* Ujistí se, že flexbox nezvětšuje výšku */
+}
+
+.text-resume {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Mezera mezi h3 a p */
+  margin: 15px;
+}
+
+.resume-photo {
+  max-width: 95px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(78, 59, 49, 0.3);
+  transform: rotate(10deg);
+  margin-top: -45px;
+}
+
+.resume-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Umístí odkaz nad ostatní prvky */
+}
+
+.resume:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #ffebaf;
+}
+
+.contacts {
+  grid-area: contacts;
+  background-color: #d2f4b7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.contacts h4 {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.contacts-ikona {
+  max-width: 25px;
+  height: auto;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+.contact-item a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background-color: #d2f4b7; /* Původní barva */
+  }
+  50% {
+    background-color: #a8e080; /* Zvýrazněná barva */
+  }
+}
+
+#contacts.blink-effect {
+  animation: blink 1s ease-in-out 2; /* Jemně problikne dvakrát */
+}
+
+.skills {
+  grid-area: skills;
+  background-color: #fbffb1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+.skills-photo {
+  max-width: 180px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(78, 59, 49, 0.3);
+  flex-shrink: 0;
+  margin-left: 45px;
+}
+
+.text-skills {
+  flex: 1;
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  gap: 10px; /* Odsun mezi <h3> a <p> */
+}
+
+.skills:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #f9ff92;
+}
+
+.more {
+  grid-area: more;
+  background-color: #fff2cc;
+  height: auto;
+  padding: 20px 30px;
+}
+
+.more:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #ffebaf;
+}
+
+.more-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+
+.more-photos {
+  position: relative;
+  max-width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.more-photos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  max-width: 200px;
+}
+
+.more-photo {
+  max-width: 115px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(78, 59, 49, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.more-photo-left {
+  transform: rotate(-12deg) translateY(-20px) translateX(40px);
+}
+
+.more-photo-right {
+  transform: rotate(12deg) translateY(20px) translateX(20px);
+}
+
+.text-more {
+  flex: 1;
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  gap: 10px; /* Odsun mezi <h3> a <p> */
+}
+
+/* --- Sekce Projekty --- */
+
+#project-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 40px 0;
+}
+
+.project-main {
+  width: 100%;
+  min-height: 190px;
+  background-color: #d2f4b7;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05), 0 8px 8px rgba(78, 59, 49, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.project-text {
+  max-width: 1200px;
+  text-align: left;
+}
+
+.project-text h3 {
+  margin-bottom: 15px;
+}
+
+.project-text p {
+  line-height: 1.4;
+}
+
+.project-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.brief-container {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.brief-container.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.brief {
+  position: relative;
+  max-width: 90px;
+  border: 1px solid rgba(78, 59, 49, 0.2);
+}
+
+.brief-1 {
+  transform: rotate(-9deg) translateX(0px) translateY(-20px);
+  z-index: 1;
+}
+
+.brief-2 {
+  transform: rotate(7deg) translateX(-35px) translateY(20px);
+  z-index: 2;
+}
+
+.sipka {
+  max-width: 50px;
+  position: relative;
+  z-index: 3;
+  transform: translateX(-15px) translateY(10px); /* výchozí jemný posun dolů */
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 0.4s;
+}
+
+.sipka.show {
+  opacity: 1;
+  transform: translateX(-15px) translateY(0); /* návrat do původní polohy */
+}
+
+.moodboard {
+  position: relative;
+  z-index: 1;
+  max-width: 100px;
+  border: 1px solid rgba(78, 59, 49, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 1s;
+}
+
+.moodboard.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-bottom: -40px;
+}
+
+/*https://stackoverflow.com/questions/50700360/css-grid-with-columns-of-unequal-height-and-width*/
+
+.project-grid .project-box:nth-child(1) {
+  grid-row: 1 / 4;
+  grid-column: 1; /* Prototyp */
+}
+
+.project-grid .project-box:nth-child(2) {
+  grid-row: 3 / 4;
+  grid-column: 1; /* Portfolio (menší dole) */
+}
+
+.project-grid .project-box:nth-child(3) {
+  grid-row: 1 / 1;
+  grid-column: 2;
+}
+
+.project-grid .project-box:nth-child(4) {
+  grid-row: 2 / 4;
+  grid-column: 2;
+}
+
+.project-box {
+  width: 100%;
+  background-color: #fbffb1;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05), 0 8px 8px rgba(78, 59, 49, 0.05);
+
+  align-items: flex-start;
+}
+
+.project-box.large {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 440px;
+}
+
+.project-box.large img {
+  display: block;
+  margin: 20px auto 25px;
+}
+
+.prototyp-img {
+  max-width: 85%;
+}
+
+.wireframe-img {
+  max-width: 65%;
+}
+
+.project-content-large {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Menší mezery mezi prvky */
+  padding-left: 20px; /* Zarovná obsah stejně jako ostatní texty */
+}
+
+.project-content-large h4 {
+  margin-bottom: -10px; /* Zmenšení mezery mezi h4 a p */
+}
+
+.project-box.large p {
+  max-width: 380px;
+}
+
+.project-box.small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 260px;
+  padding-left: 20px;
+}
+
+.project-content-small {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Menší mezery mezi prvky */
+  padding-left: 20px; /* Zarovná obsah stejně jako ostatní texty */
+}
+
+.project-content-small h4 {
+  margin-bottom: -10px; /* Zmenšení mezery mezi h4 a p */
+}
+
+.project-box.small p {
+  text-align: left;
+  max-width: 380px;
+}
+
+.project-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  align-self: flex-start;
+}
+
+.project-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+/* --- Sekce Technické dovednosti --- */
+
+.skills-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.skills-main-box {
+  width: 100%;
+  background-color: #d2f4b7;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  min-height: 200px;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skills-text {
+  max-width: 900px;
+}
+
+.skills-text h3 {
+  margin-bottom: 15px;
+}
+
+.skills-text p {
+  line-height: 1.4;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(60px, 1fr)
+  ); /* Automatická velikost */
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  max-width: 220px; /* Omezíme maximální šířku */
+}
+
+.icon-box {
+  width: 100%; /* Zajistí, že každá karta má stejnou šířku */
+  aspect-ratio: 1 / 1; /* Udrží čtvercový tvar */
+  background-color: #fff9e9;
+  border-radius: 16px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 2px 2px rgba(78, 59, 49, 0.1), 0 4px 4px rgba(78, 59, 49, 0.08),
+    0 6px 6px rgba(78, 59, 49, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: opacity 0.85s ease-out, transform 0.85s ease-out;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.skills-icon {
+  max-width: 75%; /* Ikona bude vždy proporcionální vůči kartě */
+  height: auto;
+}
+
+.skills-icon[src*="figma"] {
+  max-width: 73%;
+}
+.skills-icon[src*="github"] {
+  max-width: 100%;
+  margin-left: 1px;
+}
+.skills-icon[src*="colors"] {
+  max-width: 75%;
+  margin-left: 1px;
+}
+.skills-icon[src*="chatgtp"] {
+  max-width: 60%;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.skills-icon[src*="css"] {
+  max-width: 73%;
+}
+.skills-icon[src*="html"] {
+  max-width: 73%;
+}
+
+.skills-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+  max-width: 1000px;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.skill-box {
+  min-height: 270px;
+  background-color: #fbffb1;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 25px;
+  text-align: center;
+}
+
+.skill-box h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.skill-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.skill-box li {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e3b31;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 45px;
+  text-align: left;
+}
+
+.skill-box li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4e3b31;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+/* --- Sekce Poklady Země --- */
+
+.poklady-section {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 40px 0;
+}
+
+.poklady-main-box {
+  max-width: 1200px;
+  background-color: #d2f4b7;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px #4e3b310d, 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  min-height: 150px;
+}
+
+.poklady-text {
+  max-width: 1200px;
+  text-align: left;
+}
+
+.poklady-text h3 {
+  margin-bottom: 15px;
+}
+
+.poklady-text p {
+  line-height: 1.4;
+}
+
+.poklady-logo {
+  max-width: 140px;
+  height: auto;
+  transform: translateX(-30px) translateY(20px) scale(0.9);
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.poklady-logo.show {
+  opacity: 1;
+  transform: translateX(-30px) translateY(0) scale(1);
+}
+
+.poklady-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.poklady-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  opacity: 0.4; /* Lehce průhledné, aby byly vidět, ale nenápadné */
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Když se objeví, získají normální velikost a plnou viditelnost */
+.poklady-row.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.poklady-img {
+  max-height: 300px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.poklady-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  transform: scale(0.8);
+  transition: transform 0.4s ease-in-out;
+}
+
+.modal.show {
+  opacity: 1;
+}
+
+.modal.show img {
+  transform: scale(1);
+}
+
+.modal img:hover {
+  transform: scale(1.02);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.poklady-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+}
+
+.poklady-box {
+  min-height: 300px;
+  max-width: 100%;
+  background-color: #fbffb1;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  text-align: left;
+}
+
+.poklady-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.poklady-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  align-self: flex-start;
+  margin-top: 15px;
+}
+
+.poklady-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+.footer {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 220px;
+  margin: 50px auto;
+  background-color: #fff2cc;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 4px 4px rgba(78, 59, 49, 0.1), 0 8px 8px rgba(78, 59, 49, 0.08),
+    0 12px 12px rgba(78, 59, 49, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 28px;
+  margin: auto;
+}
+
+.footer-menu,
+.footer-contact,
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-menu h6 {
+  margin: 0 20px;
+}
+
+.footer-contact h6 {
+  margin: 0 10px;
+}
+
+.footer-copyright h6 {
+  font-weight: 400;
+}
+
+.footer-menu h6 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.4s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.footer-menu h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #332720;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Přidá mezeru mezi email a LinkedIn */
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Mezera mezi ikonou a textem */
+}
+
+.footer-ikona {
+  width: 30px; /* Velikost ikonky */
+  height: auto;
+}
+
+/* Stylování odkazů v kontaktech */
+.footer-contact a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.4s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+/* Hover efekt jako v menu */
+.footer-contact a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}

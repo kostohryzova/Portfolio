@@ -1,0 +1,653 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 40px;
+  background-color: #fff9e9;
+}
+
+body {
+  transition: opacity 0.4s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #4e3b31;
+}
+
+h1 {
+  font-size: 32.44px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 28.83px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 25.63px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 22.78px;
+  font-weight: 500;
+  text-shadow: 0.3px 0 0 currentColor;
+}
+
+h5 {
+  font-size: 20.25px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 40px auto;
+}
+
+header {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1120px;
+  width: 100%;
+  min-height: 45px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #fff2cc;
+  z-index: 1000;
+  box-shadow: 0 4px 4px rgba(78, 59, 49, 0.1), 0 8px 8px rgba(78, 59, 49, 0.08),
+    0 12px 12px rgba(78, 59, 49, 0.05);
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.nav-left h6 a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+.nav-left h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  width: 60%;
+  list-style: none;
+  padding: 0;
+  margin: 0 20px;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li h6 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+nav ul li h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.prototyp-box {
+  max-width: 1200px;
+  background-color: #fbffb1;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  padding: 40px;
+  text-align: left;
+  margin: 40px auto 50px;
+}
+
+.prototyp-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.prototyp-text {
+  width: 55%;
+  max-width: 650px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 13px; /* Nastaví stejné odsazení mezi všemi prvky */
+  padding: 8px 0 0 20px; /* Odsazení od levého a horního okraje */
+}
+
+.prototyp-text li {
+  margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e3b31;
+  margin-left: 16px;
+}
+
+.prototyp-text p {
+  margin-bottom: 10px;
+}
+
+.prototyp-text h3 {
+  margin-bottom: 10px;
+}
+
+.prototyp-text li strong {
+  font-weight: 700;
+  color: #4e3b31;
+  margin-right: 5px;
+}
+
+.prototyp-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.prototyp-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+.prototyp-img-wrapper {
+  width: 45%;
+  display: flex;
+  justify-content: center; /* Zarovná obrázek na střed horizontálně */
+  align-items: center; /* Zarovná obrázek na střed vertikálně */
+}
+
+.prototyp-img {
+  max-width: 80%;
+  height: auto;
+}
+
+.portfolio-box {
+  max-width: 1200px;
+  background-color: #d2f4b7;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  padding: 40px;
+  text-align: left;
+  margin: 40px auto 50px;
+}
+
+.portfolio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.portfolio-text {
+  width: 55%;
+  max-width: 650px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 13px; /* Nastaví stejné odsazení mezi všemi prvky */
+  padding: 8px 0 0 20px; /* Odsazení od levého a horního okraje */
+}
+
+.portfolio-text li {
+  margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e3b31;
+  margin-left: 16px;
+}
+
+.portfolio-text p {
+  margin-bottom: 10px;
+}
+
+.portfolio-text h3 {
+  margin-bottom: 10px;
+}
+
+.portfolio-text li strong {
+  font-weight: 700;
+  color: #4e3b31;
+  margin-right: 5px;
+}
+
+.project-links li strong a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+.project-links li strong a:hover {
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+.portfolio-buttons {
+  display: flex;
+  gap: 30px; /* Mezera mezi buttony */
+  flex-wrap: wrap; /* Aby buttony byly responsivní na menších obrazovkách */
+}
+
+.portfolio-img {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.wireframe-box {
+  max-width: 1200px;
+  background-color: #fbffb1;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  padding: 40px;
+  text-align: left;
+  margin: 40px auto 50px;
+}
+
+.wireframe-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.wireframe-text {
+  width: 55%;
+  max-width: 650px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 13px; /* Nastaví stejné odsazení mezi všemi prvky */
+  padding: 8px 0 0 20px; /* Odsazení od levého a horního okraje */
+}
+
+.wireframe-text li {
+  margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e3b31;
+  margin-left: 16px;
+}
+
+.wireframe-text p {
+  margin-bottom: 10px;
+}
+
+.wireframe-text h3 {
+  margin-bottom: 10px;
+}
+
+.wireframe-text li strong {
+  font-weight: 700;
+  color: #4e3b31;
+  margin-right: 5px;
+}
+
+.wireframe-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wireframe-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+.wireframe-img {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px) translateX(-40px);
+  transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.wireframe-img.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(-40px);
+}
+
+.vizitka-box {
+  background-color: #d2f4b7;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 1px 1px rgba(78, 59, 49, 0.05), 0 2px 2px rgba(78, 59, 49, 0.05),
+    0 4px 4px rgba(78, 59, 49, 0.05);
+  padding: 40px;
+  text-align: left;
+  margin: 40px auto 50px;
+}
+
+.vizitka-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.vizitka-text {
+  width: 50%;
+  max-width: 650px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 13px; /* Nastaví stejné odsazení mezi všemi prvky */
+  padding: 8px 0 0 20px; /* Odsazení od levého a horního okraje */
+}
+
+.vizitka-text li {
+  margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4e3b31;
+  margin-left: 16px;
+}
+
+.vizitka-text p {
+  margin-bottom: 10px;
+}
+
+.vizitka-text h3 {
+  margin-bottom: 10px;
+}
+
+.vizitka-text li strong {
+  font-weight: 700;
+  color: #4e3b31;
+  margin-right: 5px;
+}
+
+.vizitka-box button {
+  width: auto;
+  min-height: 50px;
+  padding: 7px 25px;
+  background-color: #fff2cc;
+  border: 1px solid rgba(78, 59, 49, 0.35);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4e3b31;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(78, 59, 49, 0.1), 0 4px 8px rgba(78, 59, 49, 0.08);
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out, transform 0.45s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.vizitka-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffebaf;
+}
+
+.vizitka-buttons {
+  display: flex;
+  gap: 30px; /* Mezera mezi buttony */
+  flex-wrap: wrap; /* Aby buttony byly responsivní na menších obrazovkách */
+}
+
+.vizitka-img-wrapper {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.kod-vizitka-img {
+  width: auto;
+  max-width: 65%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vizitka-img-wrapper img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.vizitka-img-wrapper img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sipka-vizitka-img {
+  width: auto;
+  max-width: 15%;
+  align-self: flex-start;
+}
+
+.vizitka-vizitka-img {
+  max-width: 70%;
+}
+
+.footer {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 220px;
+  margin: 50px auto;
+  background-color: #fff2cc;
+  border-radius: 40px;
+  border: 1px solid rgba(78, 59, 49, 0.15);
+  box-shadow: 0 4px 4px rgba(78, 59, 49, 0.1), 0 8px 8px rgba(78, 59, 49, 0.08),
+    0 12px 12px rgba(78, 59, 49, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 28px;
+  margin: auto;
+}
+
+.footer-menu,
+.footer-contact,
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-menu h6 {
+  margin: 0 20px;
+}
+
+.footer-contact h6 {
+  margin: 0 10px;
+}
+
+.footer-copyright h6 {
+  font-weight: 400;
+}
+
+.footer-menu h6 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.4s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.footer-menu h6 a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #332720;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Přidá mezeru mezi email a LinkedIn */
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Mezera mezi ikonou a textem */
+}
+
+.footer-ikona {
+  width: 30px; /* Velikost ikonky */
+  height: auto;
+}
+
+/* Stylování odkazů v kontaktech */
+.footer-contact a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, transform 0.4s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+  display: inline-flex;
+}
+
+/* Hover efekt jako v menu */
+.footer-contact a:hover {
+  color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
