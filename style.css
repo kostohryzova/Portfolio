@@ -61,10 +61,6 @@ p {
   font-weight: 500;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .wrap {
   box-sizing: border-box;
   max-width: 1200px;
@@ -116,6 +112,12 @@ nav {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+.nav-left h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
+}
+
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -140,6 +142,12 @@ nav ul li h6 a:hover {
   color: #332720;
   transform: scale(1.025);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav ul li h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17;
+  text-shadow: none;
 }
 
 .nav-right {
@@ -209,6 +217,7 @@ nav ul li h6 a:hover {
 .project {
   grid-area: project;
   background-color: #fbffb1;
+  transition: transform 0.45s ease-in-out, background-color 0.45s ease-in-out;
 }
 
 .project-content {
@@ -236,12 +245,18 @@ nav ul li h6 a:hover {
   background-color: #f9ff92;
 }
 
+.project:active {
+  transform: scale(0.98) translateY(3px);
+  background-color: #f0f673;
+}
+
 .resume {
   grid-area: resume;
   background-color: #fff2cc;
   padding: 20px;
   position: relative;
   display: flex;
+  transition: transform 0.45s ease-in-out, background-color 0.45s ease-in-out;
 }
 
 .resume-content {
@@ -283,6 +298,11 @@ nav ul li h6 a:hover {
   transform: scale(1.05);
   cursor: pointer;
   background-color: #ffebaf;
+}
+
+.resume:active {
+  transform: scale(0.98) translateY(3px);
+  background-color: #ffde79;
 }
 
 .contacts {
@@ -347,6 +367,7 @@ nav ul li h6 a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
+  transition: transform 0.45s ease-in-out, background-color 0.45s ease-in-out;
 }
 
 .skills-content {
@@ -380,17 +401,28 @@ nav ul li h6 a:hover {
   background-color: #f9ff92;
 }
 
+.skill:active {
+  transform: scale(0.98) translateY(3px);
+  background-color: #f0f673;
+}
+
 .more {
   grid-area: more;
   background-color: #fff2cc;
   height: auto;
   padding: 20px 30px;
+  transition: transform 0.45s ease-in-out, background-color 0.45s ease-in-out;
 }
 
 .more:hover {
   transform: scale(1.05);
   cursor: pointer;
   background-color: #ffebaf;
+}
+
+.more:active {
+  transform: scale(0.98) translateY(3px);
+  background-color: #ffde79;
 }
 
 .more-content {
@@ -689,6 +721,12 @@ nav ul li h6 a:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
   background-color: #ffebaf;
+}
+
+.project-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
 }
 
 /* --- Sekce Technické dovednosti --- */
@@ -1063,6 +1101,12 @@ nav ul li h6 a:hover {
   background-color: #ffebaf;
 }
 
+.poklady-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
+}
+
 .footer {
   max-width: 1200px;
   width: 100%;
@@ -1118,6 +1162,12 @@ nav ul li h6 a:hover {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+.footer-menu h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
+}
+
 .footer-contact a {
   text-decoration: none;
   color: inherit;
@@ -1126,27 +1176,34 @@ nav ul li h6 a:hover {
 
 .footer-contact a:hover {
   color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
 }
 
 .footer-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Přidá mezeru mezi email a LinkedIn */
+  gap: 40px;
 }
 
 .footer-contact-item {
   display: flex;
   align-items: center;
-  gap: 5px; /* Mezera mezi ikonou a textem */
+  gap: 5px;
 }
 
 .footer-ikona {
-  width: 30px; /* Velikost ikonky */
+  width: 30px;
   height: auto;
 }
 
-/* Stylování odkazů v kontaktech */
 .footer-contact a {
   text-decoration: none;
   color: inherit;
@@ -1155,9 +1212,14 @@ nav ul li h6 a:hover {
   display: inline-flex;
 }
 
-/* Hover efekt jako v menu */
 .footer-contact a:hover {
   color: #332720;
   transform: scale(1.025);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
 }
