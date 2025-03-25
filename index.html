@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio – Domů</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      body {
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+      }
+    </style>
   </head>
   <body>
     <main class="wrap">
@@ -27,9 +33,7 @@
               </h6>
             </li>
             <li>
-              <h6>
-                <a href="#contacts" data-scroll>Kontakty</a>
-              </h6>
+              <h6><a href="#contacts" data-scroll>Kontakty</a></h6>
             </li>
             <li>
               <h6><a href="#poklady-section" data-scroll>Další tvorba</a></h6>
@@ -63,6 +67,7 @@
             </div>
           </div>
         </article>
+
         <article class="hero-box project">
           <div class="project-content">
             <img
@@ -92,18 +97,14 @@
         </article>
         <article id="contacts" class="hero-box contacts">
           <h4>Kontakty</h4>
-
           <div class="contact-item">
             <img
               src="ikona_mail.svg"
               alt="Ikona e-mailu"
               class="contacts-ikona"
             />
-            <p>
-              <a href="mailto:janakosto@seznam.cz">janakosto@seznam.cz</a>
-            </p>
+            <p><a href="mailto:janakosto@seznam.cz">janakosto@seznam.cz</a></p>
           </div>
-
           <div class="contact-item">
             <img
               src="ikona_linkedin.svg"
@@ -154,6 +155,7 @@
           </div>
         </article>
       </section>
+
       <section id="project-section">
         <div class="project-main">
           <div class="project-content">
@@ -203,7 +205,7 @@
                 Prototyp rezervační aplikace ve Figmě vytvořen bez předchozího
                 wireframu.
               </p>
-              <a href="projekty.html#prototyp-section">
+              <a href="projekty.html?section=prototyp-section">
                 <button>Zobrazit celý projekt</button>
               </a>
             </div>
@@ -215,7 +217,7 @@
                 Jednoduchá webová vizitka kódovaná v HTML a CSS, inspirovaná mou
                 stávající vizitkou.
               </p>
-              <a href="projekty.html#vizitka-section">
+              <a href="projekty.html?section=vizitka-section">
                 <button>Zobrazit celý projekt</button>
               </a>
             </div>
@@ -227,7 +229,7 @@
                 Kompletní návrh a realizace portfolia – od briefu až po finální
                 kódování.
               </p>
-              <a href="projekty.html#portfolio">
+              <a href="projekty.html?section=portfolio">
                 <button>Zobrazit celý projekt</button>
               </a>
             </div>
@@ -244,13 +246,14 @@
                 Návrh intuitivní struktury obsahu s jasnou hierarchií prvků bez
                 dalšího prototypování.
               </p>
-              <a href="projekty.html#wireframe-section">
+              <a href="projekty.html?section=wireframe-section">
                 <button>Zobrazit celý projekt</button>
               </a>
             </div>
           </div>
         </div>
       </section>
+
       <section id="skills-section" class="skills-section">
         <div class="skills-main-box">
           <div class="skills-content">
@@ -265,7 +268,6 @@
                 marketingu a komunikace.
               </p>
             </div>
-
             <div class="skills-icons">
               <div class="icon-box">
                 <img src="figma.png" alt="Ikonka figma" class="skills-icon" />
@@ -330,6 +332,7 @@
           </div>
         </div>
       </section>
+
       <section id="poklady-section" class="poklady-section">
         <div class="poklady-main-box">
           <div class="poklady-text">
@@ -360,7 +363,7 @@
               <div class="poklady-content-box">
                 <h4>Tvořím šperky s příběhem</h4>
                 <p>
-                  Vyrábím šperky s minerály technikou micromacramé a další
+                  Vyrábím šperky s minerály technikou micromacrame a další
                   šperky.
                 </p>
                 <p>
@@ -431,6 +434,7 @@
           </div>
         </div>
       </section>
+
       <footer class="footer">
         <div class="footer-menu">
           <h6><a href="#home" data-scroll>Domů</a></h6>
@@ -441,7 +445,6 @@
           <h6><a href="zivotopis.pdf" target="_blank">Životopis</a></h6>
           <h6><a href="#poklady-section" data-scroll>Další tvorba</a></h6>
         </div>
-
         <div class="footer-contact">
           <div class="footer-contact-item">
             <img
@@ -469,18 +472,13 @@
             </h6>
           </div>
         </div>
-
         <div class="footer-copyright">
           <p>
-            © 2025 Jana Kostohryzová | UX/UI Designer | Portfolio vytvořeno jako
+            © 2025 Jana Pazourková | UX/UI Designer | Portfolio vytvořeno jako
             součást UX/UI studia
           </p>
         </div>
       </footer>
-      <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="modal-close">&times;</span>
-        <img id="modalImage" src="" alt="Zvětšený obrázek" />
-      </div>
     </main>
     <script src="script.js"></script>
   </body>
