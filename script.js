@@ -53,48 +53,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ Kliknutí v menu – plynulé scrollování (stejná stránka)
+  // Zachytáváme kliknutí na interní odkazy (s hashem)
   document.querySelectorAll("nav a, .footer-menu a").forEach((link) => {
     link.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
-      if (
-        !href ||
-        href.startsWith("http") ||
-        href.endsWith(".pdf") ||
-        href.includes("?section=")
-      )
-        return;
-
-      e.preventDefault();
-      const targetId = href.split("#")[1];
-      if (targetId) {
-        smoothScroll(targetId);
+      if (!href || href.startsWith("http") || href.endsWith(".pdf")) return;
+      if (href.indexOf("#") > -1) {
+        e.preventDefault();
+        const targetId = href.split("#")[1];
+        if (targetId) {
+          smoothScroll(targetId);
+        }
       }
     });
   });
 
-  // ✅ Přesměrování ze stránky projekty.html rovnou na sekci (bez mezikroku)
+  // Pokud přicházíme na stránku s URL parametrem ?section=... (např. z projekty.html)
   const urlParams = new URLSearchParams(window.location.search);
   const sectionParam = urlParams.get("section");
-
   if (sectionParam) {
     history.replaceState(null, null, window.location.pathname);
     setTimeout(() => {
       scrollToSectionInstant(sectionParam);
+      // Po scrollování odhalíme obsah
+      document.body.style.opacity = 1;
     }, 0);
+  } else {
+    // Pokud není parametr, odhalíme obsah hned po načtení
+    document.body.style.opacity = 1;
   }
 
-  //* scrol z boxíkú *//
-
-  document.querySelector(".hero-box.project").addEventListener("click", () => {
+  // Eventy pro klikací boxy na hero sekci (pokud je máš)
+  document.querySelector(".hero-box.project")?.addEventListener("click", () => {
     smoothScroll("project-section");
   });
-
-  document.querySelector(".hero-box.skills").addEventListener("click", () => {
+  document.querySelector(".hero-box.skills")?.addEventListener("click", () => {
     smoothScroll("skills-section");
   });
-
-  document.querySelector(".hero-box.more").addEventListener("click", () => {
+  document.querySelector(".hero-box.more")?.addEventListener("click", () => {
     smoothScroll("poklady-section");
   });
 });
