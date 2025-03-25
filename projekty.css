@@ -15,10 +15,6 @@ body {
   transition: opacity 0.4s ease-in-out;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3,
@@ -117,6 +113,12 @@ nav {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+.nav-left h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17;
+  text-shadow: none;
+}
+
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -141,6 +143,12 @@ nav ul li h6 a:hover {
   color: #332720;
   transform: scale(1.025);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+nav ul li h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17;
+  text-shadow: none;
 }
 
 .nav-right {
@@ -224,6 +232,12 @@ nav ul li h6 a:hover {
   background-color: #ffebaf;
 }
 
+.prototyp-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
+}
+
 .prototyp-img-wrapper {
   width: 45%;
   display: flex;
@@ -301,6 +315,12 @@ nav ul li h6 a:hover {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+.project-links li strong a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17;
+  text-shadow: none;
+}
+
 .portfolio-box button {
   width: auto;
   min-height: 50px;
@@ -323,6 +343,12 @@ nav ul li h6 a:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
   background-color: #ffebaf;
+}
+
+.portfolio-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
 }
 
 .portfolio-buttons {
@@ -413,6 +439,12 @@ nav ul li h6 a:hover {
   background-color: #ffebaf;
 }
 
+.wireframe-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
+}
+
 .wireframe-img {
   width: 45%;
   display: flex;
@@ -500,6 +532,12 @@ nav ul li h6 a:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
   background-color: #ffebaf;
+}
+
+.vizitka-box button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(78, 59, 49, 0.15);
+  background-color: #ffde79;
 }
 
 .vizitka-buttons {
@@ -608,6 +646,12 @@ nav ul li h6 a:hover {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
+.footer-menu h6 a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
+}
+
 .footer-contact a {
   text-decoration: none;
   color: inherit;
@@ -616,27 +660,34 @@ nav ul li h6 a:hover {
 
 .footer-contact a:hover {
   color: #332720;
+  transform: scale(1.025);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17; /* mírně tmavší než hover */
+  text-shadow: none;
 }
 
 .footer-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Přidá mezeru mezi email a LinkedIn */
+  gap: 40px;
 }
 
 .footer-contact-item {
   display: flex;
   align-items: center;
-  gap: 5px; /* Mezera mezi ikonou a textem */
+  gap: 5px;
 }
 
 .footer-ikona {
-  width: 30px; /* Velikost ikonky */
+  width: 30px;
   height: auto;
 }
 
-/* Stylování odkazů v kontaktech */
 .footer-contact a {
   text-decoration: none;
   color: inherit;
@@ -645,9 +696,14 @@ nav ul li h6 a:hover {
   display: inline-flex;
 }
 
-/* Hover efekt jako v menu */
 .footer-contact a:hover {
   color: #332720;
   transform: scale(1.025);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-contact a:active {
+  transform: scale(0.98) translateY(2px);
+  color: #221b17;
+  text-shadow: none;
 }
