@@ -401,7 +401,7 @@ nav ul li h6 a:active {
   background-color: #f9ff92;
 }
 
-.skill:active {
+.skills:active {
   transform: scale(0.98) translateY(3px);
   background-color: #f0f673;
 }
